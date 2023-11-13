@@ -1,6 +1,13 @@
 let textarea = document.querySelector("#text");
-let amount = document.querySelector("#amount");
+let characterNumber = document.querySelector("#character");
+let wordNumber = document.querySelector("#word");
 
 textarea.addEventListener("input", () => {
-  amount.textContent = textarea.value.length;
+  let words = text.value.split(/[\s]+/g).filter((word) => {
+    return word.length;
+  });
+
+  characterNumber.textContent = textarea.value.length;
+
+  wordNumber.textContent = words.length;
 });
